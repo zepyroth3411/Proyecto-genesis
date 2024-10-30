@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Control Remoto de Robot</title>
+    <!-- Estilos básicos en línea para dar formato a los botones y layout -->
+    <style>
+        /* Estilo básico */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color:  black;
+            color: #fff;
+            padding: 16px 0;
+        }
+
+        main {
+            margin-top: 64px;
+        }
+
+        .controls {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+
+        button {
+            padding: 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #showMessage:checked + #messageLabel{
+            display: inline;
+        }
+
+        .stop {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 300px;
+            padding: 16px;
+            background-color: grey;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header: Título del Proyecto -->
+    <header style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+        <img src="images/Robot.png" alt="Robot" style="max-width: 5%; height: auto;">
+        <div>
+            <h1>Control Remoto de Robot</h1>
+            <p>Interfaz para controlar el robot desde tu computadora</p>
+        </div>
+    </header>
+
+    <!-- Main: Controles de Movimiento -->
+    <main>
+        <section class="controls">
+            <!-- Botones organizados en una cuadrícula -->
+            <button id="up">⬆️ Adelante</button> <!-- Adelante -->
+            <button id="left">⬅️ Izquierda</button> <!-- Izquierda -->
+            <button id="stop" class="stop" target="_blank">⏹️ Stop</button> <!-- Parada -->
+            <button id="right">➡️ Derecha</button> <!-- Derecha -->
+            <button id="down">⬇️ Atrás</button> <!-- Atrás -->
+        </section>
+
+        <label for="showMessage" style="cursor: pointer; margin-top: 20px; display: block;">Estado del robot</label>
+        <input type="checkbox" id="showMessage" style="display: none;">
+        <label for="showMessage" style="display: none;" id="messageLabel">Robot listo para recibir comandos</label>
+
+        <!-- Estado del Robot -->
+        <p>Estado: <span id="status">Desconectado</span></p> <!-- Estado (estático en esta fase) -->
+    </main>
+    
+    <!-- Footer: Información del Proyecto -->
+    <footer>
+        <h2>Información del Proyecto</h2>
+        <p>Utiliza los botones para enviar comandos básicos al robot.</p>
+        <p>Para más detalles, visita nuestro <a href="https://github.com/zepyroth3411/Proyecto-genesis.git" target="_blank">repositorio en GitHub</a>.</p>
+    </footer>
+</body>
+</html>
