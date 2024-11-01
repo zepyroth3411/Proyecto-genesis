@@ -53,6 +53,7 @@ main {
     margin-top: 64px;
 }
 
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -62,6 +63,11 @@ main {
     margin-top: auto;
     margin-bottom: auto;
 }
+
+/*.project-description{
+    margin: 4px 0; /* Reduce el espacio entre párrafos */
+/*} */
+
 
 /* Secciones */
 .page-section, .connect-section {
@@ -78,6 +84,7 @@ main {
 .menu li a[href="#conectar"]:hover ~ .connect-section {
     display: block;
 }
+
 
 /* Botones de control */
 .controls {
