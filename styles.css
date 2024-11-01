@@ -1,0 +1,109 @@
+/* Estilo básico */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Visualización de la sección por defecto en el cuerpo */
+body:not(:has(:target)) #pprincipal {
+    display: block;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: #fff;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Barra de navegación */
+.navegacion {
+    display: flex;
+    align-items: center;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu > li > a {
+    padding: 10px 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: goldenrod;
+    transition: color 0.3s ease;
+}
+
+/* contenido principal*/
+main {
+    margin-top: 64px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Secciones */
+.page-section, .connect-section {
+    display: none;
+}
+
+#connect-controls:target,
+#pprincipal:target {
+    display: block;
+}
+
+/* Mostrar la sección "Conectar" al hacer clic */
+.menu li a[href="#conectar"]:focus ~ .connect-section,
+.menu li a[href="#conectar"]:hover ~ .connect-section {
+    display: block;
+}
+
+/* Botones de control */
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+button {
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.stop {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 310px;
+    padding: 16px;
+    background-color: grey;
+    text-align: center;
+}

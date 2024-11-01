@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma del documento -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres, asegurando que se muestren bien caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive, adaptándose a diferentes dispositivos -->
+    <title>Control Remoto de Robot</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para aplicar estilos -->
+</head>
+<body>
+    <!-- Header: Título del Proyecto -->
+    <header style="display: flex; align-items: center; justify-content: center; gap: 16px;">
+        <img src="images/Robot.png" alt="Robot" style="max-width: 5%; height: auto;">
+        <!-- Descripción breve del proyecto -->
+        <div>
+            <h1>Control Remoto de Robot</h1> <!-- Título principal del proyecto -->
+            <p>Interfaz para controlar el robot desde tu computadora</p> <!-- Descripción breve debajo del título -->
+        </div>
+        <!-- Navegación: Enlaces para moverse entre las secciones de la página -->
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="#pprincipal">Inicio</a></li> <!-- Enlace a la sección de Inicio -->
+                <li><a href="#connect-controls">Conectar</a></li> <!-- Enlace a la sección de Controles -->
+                <li><a href="#">Contacto</a></li> <!-- Enlace de Contacto (sin sección asociada) -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Sección principal de Inicio -->
+        <section id="pprincipal" class="page-section">
+            <div class="main-content">
+                <!-- Video incrustado desde YouTube -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/63bX5Mr9MyE?si=3QqEq6Rab_ILyxcU" 
+                title="YouTube Brazo Robotico" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>"holi crayoli"</p> <!-- Texto debajo del video -->
+            </div>
+        </section>
+
+        <!-- Sección de Controles de Movimiento -->
+        <section id="connect-controls" class="connect-section">
+            <div class="controls">
+                <!-- Botones para controlar el movimiento del robot -->
+                <button id="up">⬆️ Adelante</button> <!-- Adelante -->
+                <button id="left">⬅️ Izquierda</button> <!-- Izquierda -->
+                <button id="stop" class="stop">⏹️ Stop</button> <!-- Detener -->
+                <button id="right">➡️ Derecha</button> <!-- Derecha -->
+                <button id="down">⬇️ Atrás</button> <!-- Atrás -->
+            </div>
+            <p>Estado: <span id="status">Desconectado</span></p> <!-- Muestra el estado de conexión del robot -->
+        </section>
+    </main>
+
+    <!-- Pie de página o Footer: Información adicional del proyecto -->
+    <footer>
+        <h2>Información del Proyecto</h2>
+        <p>Utiliza los botones para enviar comandos básicos al robot.</p>
+        <p>Para más detalles, visita nuestro <a href="https://github.com/zepyroth3411/Proyecto-genesis.git" target="_blank">repositorio en GitHub</a>.</p>
+    </footer>
+</body>
+</html>
