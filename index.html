@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html lang="es"> <!-- Define el idioma del documento -->
+<html lang="es"> <!-- Define el tipo de documento como HTML5 y establece el idioma a español. -->
 <head>
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres, asegurando que se muestren bien caracteres especiales -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que el sitio sea responsive, adaptándose a diferentes dispositivos -->
-    <title>Control Remoto de Robot</title> <!-- Título que aparece en la pestaña del navegador -->
-    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo para aplicar estilos -->
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres en UTF-8 para mostrar caracteres especiales correctamente. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta el sitio para que sea responsive en dispositivos móviles. -->
+    <title>Control Remoto de Robot</title> <!-- Muestra este texto en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Conecta el archivo CSS externo para aplicar estilos. -->
 </head>
 <body>
-    <!-- Header: Título del Proyecto -->
+    <!-- Encabezado principal con título y navegación -->
     <header style="display: flex; align-items: center; justify-content: center; gap: 16px;">
-        <img src="images/Robot.png" alt="Robot" style="max-width: 5%; height: auto;">
-        <!-- Descripción breve del proyecto -->
+        <img src="images/Robot.png" alt="Robot" style="max-width: 5%; height: auto;"> <!-- Imagen de un robot en el encabezado. -->
         <div>
-            <h1>Control Remoto de Robot</h1> <!-- Título principal del proyecto -->
-            <p>Interfaz para controlar el robot desde tu computadora</p> <!-- Descripción breve debajo del título -->
+            <h1>Control Remoto de Robot</h1> <!-- Título principal de la página. -->
+            <p>Interfaz para controlar el robot desde tu computadora</p> <!-- Breve descripción debajo del título. -->
         </div>
-        <!-- Navegación: Enlaces para moverse entre las secciones de la página -->
+        <!-- Barra de navegación con enlaces internos -->
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#pprincipal">Inicio</a></li> <!-- Enlace a la sección de Inicio -->
-                <li><a href="#connect-controls">Conectar</a></li> <!-- Enlace a la sección de Controles -->
-                <li><a href="#">Contacto</a></li> <!-- Enlace de Contacto (sin sección asociada) -->
+                <li><a href="#pprincipal">Inicio</a></li> <!-- Enlace a la sección de "Inicio". -->
+                <li><a href="#connect-controls">Conectar</a></li> <!-- Enlace a la sección de "Conectar". -->
+                <li><a href="#">Contacto</a></li> <!-- Enlace de contacto (sin funcionalidad aún). -->
             </ul>
         </nav>
     </header>
     
     <main>
-        <!-- Sección principal de Inicio -->
+        <!-- Sección de Inicio con video y lista de características -->
         <section id="pprincipal" class="page-section">
             <div class="main-content">
-                <!-- Video incrustado desde YouTube -->
-                <iframe src="https://www.youtube.com/embed/63bX5Mr9MyE?autoplay=1&mute=1&t=30s" width="560" height="315"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/63bX5Mr9MyE?autoplay=1&mute=1&t=30s" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <!-- Video incrustado de YouTube con auto-reproducción en silencio y en una posición específica. -->
                 <div class="project-description"></div>
                 <ul>
-                    <li><strong>Proyecto Génesis:</strong> Control Remoto de Robots en Tiempo Real</li>
+                    <li><strong>Proyecto Génesis:</strong> Control Remoto de Robots en Tiempo Real</li> <!-- Lista que explica los objetivos del proyecto. -->
                     <li>Permite controlar un robot de forma remota mediante una interfaz web.</li>
                     <li>Usa tecnologías fullstack para la comunicación cliente-servidor.</li>
                     <li>El microcontrolador NodeMCU recibe y ejecuta las instrucciones enviadas desde la web.</li>
@@ -42,25 +40,24 @@
             </div>
         </section>
 
-        <!-- Sección de Controles de Movimiento -->
+        <!-- Sección de Controles para manipular el robot -->
         <section id="connect-controls" class="connect-section">
             <div class="controls">
-                <!-- Botones para controlar el movimiento del robot -->
-                <button id="up">⬆️ Adelante</button> <!-- Adelante -->
-                <button id="left">⬅️ Izquierda</button> <!-- Izquierda -->
-                <button id="stop" class="stop">⏹️ Stop</button> <!-- Detener -->
-                <button id="right">➡️ Derecha</button> <!-- Derecha -->
-                <button id="down">⬇️ Atrás</button> <!-- Atrás -->
+                <button id="up">⬆️ Adelante</button> <!-- Botón para avanzar el robot. -->
+                <button id="left">⬅️ Izquierda</button> <!-- Botón para mover el robot a la izquierda. -->
+                <button id="stop" class="stop">⏹️ Stop</button> <!-- Botón para detener el movimiento del robot. -->
+                <button id="right">➡️ Derecha</button> <!-- Botón para mover el robot a la derecha. -->
+                <button id="down">⬇️ Atrás</button> <!-- Botón para retroceder el robot. -->
             </div>
-            <p>Estado: <span id="status">Desconectado</span></p> <!-- Muestra el estado de conexión del robot -->
+            <p>Estado: <span id="status">Desconectado</span></p> <!-- Muestra el estado de conexión actual del robot. -->
         </section>
     </main>
 
-    <!-- Pie de página o Footer: Información adicional del proyecto -->
+    <!-- Pie de página con información adicional -->
     <footer>
         <h2>Información del Proyecto</h2>
         <p>Utiliza los botones para enviar comandos básicos al robot.</p>
-        <p>Para más detalles, visita nuestro <a href="https://github.com/zepyroth3411/Proyecto-genesis.git" target="_blank">repositorio en GitHub</a>.</p>
+        <p>Para más detalles, visita nuestro <a href="https://github.com/zepyroth3411/Proyecto-genesis.git" target="_blank">repositorio en GitHub</a>.</p> <!-- Enlace a GitHub para más información. -->
     </footer>
 </body>
 </html>
