@@ -1,4 +1,4 @@
-/* Estilo básico */
+/* Estilo básico */ 
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -6,9 +6,9 @@ body {
     padding: 0;
 }
 
-/* Visualización de la sección por defecto en el cuerpo */
-body:not(:has(:target)) #pprincipal {
-    display: block;
+/* Mostrar sección principal por defecto */
+#pprincipal {
+    display: hidden;
 }
 
 /* Header */
@@ -48,11 +48,10 @@ header {
     transition: color 0.3s ease;
 }
 
-/* contenido principal*/
+/* contenido principal */
 main {
     margin-top: 64px;
 }
-
 
 .main-content {
     display: flex;
@@ -64,23 +63,21 @@ main {
     margin-bottom: auto;
 }
 
-
-/* Secciones */
+/* Ocultar secciones por defecto */
 .page-section, .connect-section {
     display: none;
 }
 
-#connect-controls:target,
-#pprincipal:target {
+/* Mostrar sección activa según el ID en el enlace */
+#pprincipal:target,
+#connect-controls:target {
     display: block;
 }
 
-/* Mostrar la sección "Conectar" al hacer clic */
-.menu li a[href="#conectar"]:focus ~ .connect-section,
-.menu li a[href="#conectar"]:hover ~ .connect-section {
+/* Forzar el inicio en la sección principal al cargar la página */
+body:not(:has(:target)) #pprincipal {
     display: block;
 }
-
 
 /* Botones de control */
 .controls {
