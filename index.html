@@ -20,29 +20,83 @@
         <!-- Barra de navegación con enlaces internos -->
         <nav class="bg-black text-white">
             <ul class="flex justify-center space-x-8">
-                <li><a href="#pprincipal" class="hover:text-yellow-400 transition-colors">Inicio</a></li> <!-- Enlace a la sección de "Inicio". -->
-                <li><a href="#connect-controls" class="hover:text-yellow-400 transition-colors">Conectar</a></li> <!-- Enlace a la sección de "Conectar". -->
-                <li><a href="#contacto"class="hover:text-yellow-400 transition-colors">Contacto</a></li> <!-- Enlace de contacto (sin funcionalidad aún). -->
+                <a href="#inicio" class="hover:text-yellow-400 transition-colors">Inicio</a> <!-- Enlace a la sección de "Inicio". -->
+                <a href="#connect-controls" class="hover:text-yellow-400 transition-colors">Centro de control</a> <!-- Enlace a la sección de "Conectar". -->
+                <a href="#documentation"class="hover:text-yellow-400 transition-colors">Documentacion</a>
+                <a href="#gallery"class="hover:text-yellow-400 transition-colors">Galeria</a><!-- Enlace de galeria (sin funcionalidad aún). -->
+                <a href="#about"class="hover:text-yellow-400 transition-colors">Acerca de</a> <!-- Enlace de contacto (sin funcionalidad aún). -->
             </ul>
         </nav>
     </header>
     
     <main class="flex-grow">
         <!-- Sección de Inicio con video y lista de características -->
-        <section id="pprincipal" class="transition-opacity duration-500 block" >
-            <div class="flex flex-col items-center lg_flex-row lg:justify-center gap-8">
-                <iframe class="ytvideo1" class="border-4 border-yellow-400 rounded-lg shadow-lg" src="https://www.youtube.com/embed/63bX5Mr9MyE?autoplay=1&mute=1&t=30s" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <!-- Video incrustado de YouTube con auto-reproducción en silencio y en una posición específica. -->
-                <div class="bg-gray-100 p-4 rounded-lg shadow-md max-w-md">
-                        <ul class="list-disc text-left pl-6">
-                        <li><strong>Proyecto Génesis:</strong> Control Remoto de Robots en Tiempo Real.</li>
-                        <li>Permite controlar un robot de forma remota mediante una interfaz web.</li>
-                        <li>Usa tecnologías fullstack para la comunicación cliente-servidor</li>
-                        <li>El microcontrolador NodeMCU recibe y ejecuta las instrucciones enviadas desde la web.</li>
+        <section id="inicio" class="transition-opacity duration-500 block px-6 py-10 bg-gray-50">
+            <!-- Título centrado -->
+            <h1 class="text-3xl font-extrabold text-center mb-8 text-gray-800">
+                Control Remoto para un Futuro Autónomo
+            </h1>
+        
+            <!-- Contenedor principal -->
+            <div class="flex flex-col lg:flex-row lg:items-start lg:justify-center gap-8">
+                <!-- Video -->
+                <iframe 
+                    class="border-4 border-gray-300 rounded-lg shadow-lg" 
+                    src="https://www.youtube.com/embed/63bX5Mr9MyE?autoplay=1&mute=1&t=30s" 
+                    width="560" 
+                    height="315" 
+                    frameborder="0" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen>
+                </iframe>
+        
+                <!-- Descripción del video -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-md">
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li><strong>Objetivo del proyecto:</strong> Demostrar como la tecnologia puede superar barreras fisicas </li>
+                        <li>Facilitar el control remoto de dispositivos complejos.</li>
+                        <li>Resaltar la importancia de la comunicación cliente-servidor en aplicaciones prácticas.</li>
+                        <li>Integrar interfaces web intuitivas con tecnología avanzada para resolver problemas reales.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
+            
 
+                        <!-- Reseña adicional con GIF -->
+            <div class="flex flex-col lg:flex-row items-center lg:justify-center gap-8 mt-10">
+                <!-- Texto de la reseña -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-md">
+                    <p class="text-gray-700 mb-4">Este proyecto surge como parte de una materia universitaria, donde el reto era diseñar un sistema innovador de control remoto. 
+                    La solución permitió a una persona, desde un aula, enviar comandos a través de otro módulo de control,
+                    para mover un brazo robótico ubicado en otro espacio. 
+                    Todo el proceso se gestiona con microcontroladores,
+                    demostrando cómo la tecnología puede superar las barreras físicas.</p>
+                </div>
+        
+                <!-- GIF del proyecto -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-md flex items-center justify-center">
+                    <img 
+                        class="rounded-lg shadow-lg" 
+                        src="assets/images/brazo-robotico-unscreen.gif" 
+                        alt="Demostración del brazo robótico en acción" 
+                        width="300">
+                </div>
+            </div>
+        
+            <!-- Objetivo principal -->
+            <div class="mt-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-4xl mx-auto">
+                    <h3 class="text-lg font-bold mb-4 text-gray-800">proximo contenido</h3>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                        <li>proximo contenido.</li>
+                        <li>Rproximo contenido.</li>
+                        <li>Iproximo contenido.</li>
+                    </ul>
+                </div>
+            </div>
+        
+
+        </section>
         <!-- Sección de Controles para manipular el robot -->
         <section id="connect-controls" class="transition-opacity duration-500 hidden flex-col items-center justify-center">
             <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto">
@@ -55,7 +109,28 @@
             <p class="mt-4 text-center">Estado: <span id="status" class="font-semibold">Desconectado</span></p>
         </section>
 
-        <section id="contacto" class="transition-opacity duration-500 hidden">
+                <!-- Sección de documentacion -->
+        <section id="documentation" class="transition-opacity duration-500 hidden">
+            <div class="text-center">
+                <h2 class="text-xl font-bold">Contacto</h2>
+                <p>Para consultas, puedes escribirnos a: 
+                    <a href="mailto:contacto@proyectogenesis.com" class="text-blue-500 hover:underline">contacto@proyectogenesis.com</a>
+                </p>
+                <p>Síguenos en nuestras redes sociales para actualizaciones del proyecto.</p>
+            </div>
+        </section>
+                 <!-- Sección de galeria -->
+        <section id="gallery" class="transition-opacity duration-500 hidden">
+            <div class="text-center">
+                <h2 class="text-xl font-bold">Contacto</h2>
+                <p>Para consultas, puedes escribirnos a: 
+                    <a href="mailto:contacto@proyectogenesis.com" class="text-blue-500 hover:underline">contacto@proyectogenesis.com</a>
+                </p>
+                <p>Síguenos en nuestras redes sociales para actualizaciones del proyecto.</p>
+            </div>
+        </section>
+                    <!-- Sección de acerca de  -->
+        <section id="about" class="transition-opacity duration-500 hidden">
             <div class="text-center">
                 <h2 class="text-xl font-bold">Contacto</h2>
                 <p>Para consultas, puedes escribirnos a: 
