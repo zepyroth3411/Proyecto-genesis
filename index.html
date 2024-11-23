@@ -106,16 +106,24 @@
             
             <!-- Controles principales -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
-                    <h3 class="text-lg font-bold mb-2 text-white">Movimiento</h3>
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬅ Izquierda</button>
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">➡ Derecha</button>
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬆ Arriba</button>
-                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">⬇ Abajo</button>
-                    <h3 class="text-lg font-bold mb-2 text-white">Garra</h3>
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Abrir</button>
-                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Cerrar</button>
+                <div class="bg-gray-600 p-4 rounded-lg shadow-lg flex">
+                    <!-- Sección Movimiento -->
+                    <div class="flex-1 pr-4 border-r border-gray-400">
+                        <h3 class="text-lg font-bold mb-2 text-white">Movimiento</h3>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬅ Izquierda</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">➡ Derecha</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬆ Arriba</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">⬇ Abajo</button>
+                    </div>
+        
+                    <!-- Sección Garra -->
+                    <div class="flex-1 pl-4">
+                        <h3 class="text-lg font-bold mb-2 text-white">Garra</h3>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Abrir</button>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Cerrar</button>
+                    </div>
                 </div>
+                
                 <!-- Indicador de estado y textbox -->
                 <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
                     <h3 class="text-lg font-bold mb-2 text-white">Conexión</h3>
@@ -128,17 +136,17 @@
                     <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">Conectar</button>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div class="bg-gray-600 p-6 rounded-lg shadow-md max-w-md flex items-center justify-center">
-                            <img 
-                                class="rounded-lg shadow-lg" 
-                                src="assets/images/brazo-robotico-unscreen.gif" 
-                                alt="Demostración del brazo robótico en acción" 
-                                width="300">
-                        </div>
+                    <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
+                        <img 
+                            class="rounded-lg shadow-lg" 
+                            src="assets/images/brazo-robotico-unscreen.gif" 
+                            alt="Demostración del brazo robótico en acción" 
+                            width="300">
                     </div>
+                </div>
             </div>
         </section>
-
+        
                 <!-- Sección de documentacion -->
         <section id="documentation" class="transition-opacity duration-500 hidden">
             <div class="text-center">
