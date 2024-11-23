@@ -83,30 +83,60 @@
                 </div>
             </div>
         
-            <!-- Objetivo principal -->
-            <div class="mt-8">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-4xl mx-auto">
-                    <h3 class="text-lg font-bold mb-4 text-gray-800">proximo contenido</h3>
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700">
-                        <li>proximo contenido.</li>
-                        <li>proximo contenido.</li>
-                        <li>Iproximo contenido.</li>
-                    </ul>
-                </div>
+            <!-- Llamado a la accion  -->
+            <div class="bg-gray-800 text-white p-6 rounded-lg shadow-md mt-10 text-center">
+                    <h3 class="text-2x1 font-bold mb-4 ">¡Explora la tecnología detrás del proyecto!"</h3>
+                    <p class="mb-4 text-gray-300">
+                        Descubre los detalles técnicos y los desafíos superados en este innovador proyecto.
+                        Aprende cómo la tecnología puede superar las barreras físicas y conectar ideas con acción. 
+                    </p>
+                    <a href="#documentation" class="bg-yellow-400 text-gray-900 font-bold py-2 px-6 rounded-lg shadow-md hover:bg-yellow-500 transition-all duration-300">
+                        Explora la documentacion
+                    </a>
             </div>
         
 
         </section>
         <!-- Sección de Controles para manipular el robot -->
         <section id="connect-controls" class="transition-opacity duration-500 hidden flex-col items-center justify-center">
-            <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto">
-                <button class="col-start-2 bg-gray-200 hover:bg-yellow-400 p-4 rounded shadow text-lg font-semibold transition-transform hover:scale-100">⬆ Adelante</button>
-                <button class="col-start-1 bg-gray-200 hover:bg-yellow-400 p-4 rounded shadow text-lg font-semibold transition-transform hover:scale-100">⬅ Izquierda</button>
-                <button class="col-start-2 bg-red-500 text-white font-bold p-4 rounded shadow text-lg transition-transform hover:scale-105">⏹ Stop</button>
-                <button class="col-start-3 bg-gray-200 hover:bg-yellow-400 p-4 rounded shadow text-lg font-semibold transition-transform hover:scale-100">➡ Derecha</button>
-                <button class="col-start-2 bg-gray-200 hover:bg-yellow-400 p-4 rounded shadow text-lg font-semibold transition-transform hover:scale-100">⬇ Atrás</button>
+            <h2 class="text-3xl font-bold text-center mb-6">Centro de Mando</h2>
+            <p class="text-center max-w-xl mx-auto mb-8">
+                Controla las acciones del brazo robótico de forma precisa e intuitiva. ¡Experimenta el futuro de la robótica en tiempo real!
+            </p>
+            
+            <!-- Controles principales -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold mb-2 text-white">Movimiento</h3>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬅ Izquierda</button>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">➡ Derecha</button>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬆ Arriba</button>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">⬇ Abajo</button>
+                    <h3 class="text-lg font-bold mb-2 text-white">Garra</h3>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Abrir</button>
+                    <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Cerrar</button>
+                </div>
+                <!-- Indicador de estado y textbox -->
+                <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold mb-2 text-white">Conexión</h3>
+                    <div class="flex items-center mb-4">
+                        <span class="h-4 w-4 rounded-full bg-green-500 mr-2"></span>
+                        <p class="text-gray-100">Estado: <strong>Conectado</strong></p>
+                    </div>
+                    <label for="connection-address" class="block text-gray-100 text-sm mb-2">Dirección del dispositivo:</label>
+                    <input id="connection-address" type="text" placeholder="Ej: 192.168.1.10" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring focus:ring-blue-500"/>
+                    <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">Conectar</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-gray-600 p-6 rounded-lg shadow-md max-w-md flex items-center justify-center">
+                            <img 
+                                class="rounded-lg shadow-lg" 
+                                src="assets/images/brazo-robotico-unscreen.gif" 
+                                alt="Demostración del brazo robótico en acción" 
+                                width="300">
+                        </div>
+                    </div>
             </div>
-            <p class="mt-4 text-center">Estado: <span id="status" class="font-semibold">Desconectado</span></p>
         </section>
 
                 <!-- Sección de documentacion -->
