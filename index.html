@@ -148,15 +148,57 @@
         </section>
         
                 <!-- Sección de documentacion -->
-        <section id="documentation" class="transition-opacity duration-500 hidden">
-            <div class="text-center">
-                <h2 class="text-xl font-bold">Contacto</h2>
-                <p>Para consultas, puedes escribirnos a: 
-                    <a href="mailto:contacto@proyectogenesis.com" class="text-blue-500 hover:underline">contacto@proyectogenesis.com</a>
-                </p>
-                <p>Síguenos en nuestras redes sociales para actualizaciones del proyecto.</p>
-            </div>
-        </section>
+                <section id="documentation" class="px-6 py-10 bg-gray-50">
+                    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Documentación del Proyecto</h2>
+                    <div class="space-y-6">
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-full md:max-w-4xl mx-auto my-6">
+                            <h3 class="text-2xl font-semibold text-gray-700 mb-4">1. Introducción del proyecto</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                Este proyecto nace como una práctica universitaria con el objetivo de demostrar cómo es posible controlar dispositivos físicos, como una garra robótica, de manera remota y eficiente mediante tecnología moderna. Aunque sencillo en su concepción, el prototipo introduce conceptos fundamentales de electrónica y programación, y ofrece una experiencia completa en desarrollo <strong>full-stack</strong> al integrar hardware y software.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mt-4">
+                                El ejemplo de la garra robótica puede escalarse hacia aplicaciones más complejas, como el control de PLCs, sistemas embebidos, brazos robóticos industriales o simulaciones de control remoto en sectores como la industria y la exploración remota. Además, en entornos educativos, sirve como introducción práctica a la programación y la electrónica básica.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mt-4">
+                                En resumen, este proyecto no solo cumple objetivos académicos, sino que también demuestra el potencial de herramientas tecnológicas accesibles para resolver problemas reales y explorar soluciones innovadoras.
+                            </p>
+                        </div>
+                        <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-full md:max-w-4xl mx-auto my-6">
+                            <h3 class="text-2xl font-semibold text-gray-700 mb-4">2. Arquitectura del Sistema</h3>
+                            <p class="text-gray-700 leading-relaxed">
+                                La arquitectura del sistema conecta al usuario, el servidor y el hardware para lograr el control eficiente de la garra robótica. Esta integración entre software y hardware está diseñada de manera modular, permitiendo escalabilidad y adaptabilidad a diferentes aplicaciones.   
+                            </p>
+                            <h4 class="text-2xl font-semibold text-gray-700 mb-4">Componentes del sistema</h4> 
+                            <p class="text-gray-700 leading-relaxed mt-4">
+                                <strong>1.Cliente (Frontend)</strong> El cliente se representa mediante una interfaz web intuitiva y accesible desde cualquier navegador. A través de esta interfaz, el usuario puede enviar comandos específicos para interactuar con la garra robótica, como abrir, cerrar, o moverla en distintas direcciones.
+                                Los comandos generados por el usuario son enviados al servidor utilizando solicitudes HTTP o WebSockets, dependiendo de los requerimientos de comunicación en tiempo real.
+                                </p>
+                                <strong>2.Servidor (Backend)</strong>El servidor se encuentra alojado en un entorno que procesa y valida las solicitudes enviadas desde el cliente. Este componente traduce los comandos en un formato que el NodeMCU pueda interpretar y los transmite al hardware a través de una red local (Wi-Fi).
+                                Adicionalmente, el servidor puede realizar funciones como:
+                                <li>Autenticación de usuarios.</li>
+                                <li>Registro de comandos para análisis posterior.</li>
+                                <li>Notificación de errores en caso de fallas en la ejecución.</li>
+                            </p>
+                            <p class="text-gray-700 leading-relaxed mt-4">
+                                <strong>3.Hardware (NodeMCU y garra robótica)</strong>
+                                El NodeMCU es el microcontrolador central del sistema, que se conecta al servidor mediante Wi-Fi. Este recibe comandos, los procesa y controla los motores o actuadores de la garra robótica a través de sus pines GPIO.
+                                En caso de incluir sensores, el NodeMCU también puede enviar retroalimentación al servidor sobre el estado del sistema, como la posición actual de la garra o posibles errores.
+                            </p>
+                        </div>
+
+                        <article>
+                            <h3 class="text-xl font-semibold text-gray-700">3. Requerimientos</h3>
+                            <ul class="list-disc pl-6 text-gray-600">
+                                <li>NodeMCU</li>
+                                <li>Motor paso a paso</li>
+                                <li>Fuente de alimentación</li>
+                                <li>Garra robótica</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+                
+
                  <!-- Sección de galeria -->
         <section id="gallery" class="transition-opacity duration-500 hidden">
             <div class="text-center">
