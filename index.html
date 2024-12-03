@@ -106,25 +106,24 @@
             
             <!-- Controles principales -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Controles de Movimiento y Garra -->
                 <div class="bg-gray-600 p-4 rounded-lg shadow-lg flex">
-                    <!-- Sección Movimiento -->
                     <div class="flex-1 pr-4 border-r border-gray-400">
                         <h3 class="text-lg font-bold mb-2 text-white">Movimiento</h3>
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬅ Izquierda</button>
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">➡ Derecha</button>
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2">⬆ Arriba</button>
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">⬇ Abajo</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 command-btn" data-command="Mover Izquierda">⬅ Izquierda</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 command-btn" data-command="Mover Derecha">➡ Derecha</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded mb-2 command-btn" data-command="Mover Arriba">⬆ Arriba</button>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded command-btn" data-command="Mover Abajo">⬇ Abajo</button>
                     </div>
-        
-                    <!-- Sección Garra -->
+            
                     <div class="flex-1 pl-4">
                         <h3 class="text-lg font-bold mb-2 text-white">Garra</h3>
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Abrir</button>
-                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2">Cerrar</button>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded mb-2 command-btn" data-command="Abrir Garra">Abrir</button>
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-white py-2 px-4 rounded command-btn" data-command="Cerrar Garra">Cerrar</button>
                     </div>
                 </div>
-                
-                <!-- Indicador de estado y textbox -->
+            
+                <!-- Conexión -->
                 <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
                     <h3 class="text-lg font-bold mb-2 text-white">Conexión</h3>
                     <div class="flex items-center mb-4">
@@ -135,90 +134,289 @@
                     <input id="connection-address" type="text" placeholder="Ej: 192.168.1.10" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:ring focus:ring-blue-500"/>
                     <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded w-full">Conectar</button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
-                        <img 
-                            class="rounded-lg shadow-lg" 
-                            src="assets/images/brazo-robotico-unscreen.gif" 
-                            alt="Demostración del brazo robótico en acción" 
-                            width="300">
-                    </div>
+            
+                <!-- Historial de Comandos -->
+                <div class="bg-gray-600 p-4 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold mb-2 text-white">Historial de Comandos</h3>
+                    <ul id="command-history" class="text-gray-100 list-disc ml-4 overflow-y-auto h-40 pr-2">
+                        <!-- Los comandos se agregarán aquí dinámicamente -->
+                    </ul>
                 </div>
             </div>
+
         </section>
+
         
                 <!-- Sección de documentacion -->
-                <section id="documentation" class="px-6 py-10 bg-gray-50">
+                <section id="documentation" class="px-6 py-10 bg-gray-50 hidden">
                     <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Documentación del Proyecto</h2>
                     <div class="space-y-6">
-                        <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-full md:max-w-4xl mx-auto my-6">
-                            <h3 class="text-2xl font-semibold text-gray-700 mb-4">1. Introducción del proyecto</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                Este proyecto nace como una práctica universitaria con el objetivo de demostrar cómo es posible controlar dispositivos físicos, como una garra robótica, de manera remota y eficiente mediante tecnología moderna. Aunque sencillo en su concepción, el prototipo introduce conceptos fundamentales de electrónica y programación, y ofrece una experiencia completa en desarrollo <strong>full-stack</strong> al integrar hardware y software.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                El ejemplo de la garra robótica puede escalarse hacia aplicaciones más complejas, como el control de PLCs, sistemas embebidos, brazos robóticos industriales o simulaciones de control remoto en sectores como la industria y la exploración remota. Además, en entornos educativos, sirve como introducción práctica a la programación y la electrónica básica.
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                En resumen, este proyecto no solo cumple objetivos académicos, sino que también demuestra el potencial de herramientas tecnológicas accesibles para resolver problemas reales y explorar soluciones innovadoras.
-                            </p>
-                        </div>
-                        <div class="bg-gray-100 p-6 rounded-lg shadow-md max-w-full md:max-w-4xl mx-auto my-6">
-                            <h3 class="text-2xl font-semibold text-gray-700 mb-4">2. Arquitectura del Sistema</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                La arquitectura del sistema conecta al usuario, el servidor y el hardware para lograr el control eficiente de la garra robótica. Esta integración entre software y hardware está diseñada de manera modular, permitiendo escalabilidad y adaptabilidad a diferentes aplicaciones.   
-                            </p>
-                            <h4 class="text-2xl font-semibold text-gray-700 mb-4">Componentes del sistema</h4> 
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                <strong>1.Cliente (Frontend)</strong> El cliente se representa mediante una interfaz web intuitiva y accesible desde cualquier navegador. A través de esta interfaz, el usuario puede enviar comandos específicos para interactuar con la garra robótica, como abrir, cerrar, o moverla en distintas direcciones.
-                                Los comandos generados por el usuario son enviados al servidor utilizando solicitudes HTTP o WebSockets, dependiendo de los requerimientos de comunicación en tiempo real.
-                                </p>
-                                <strong>2.Servidor (Backend)</strong>El servidor se encuentra alojado en un entorno que procesa y valida las solicitudes enviadas desde el cliente. Este componente traduce los comandos en un formato que el NodeMCU pueda interpretar y los transmite al hardware a través de una red local (Wi-Fi).
-                                Adicionalmente, el servidor puede realizar funciones como:
-                                <li>Autenticación de usuarios.</li>
-                                <li>Registro de comandos para análisis posterior.</li>
-                                <li>Notificación de errores en caso de fallas en la ejecución.</li>
-                            </p>
-                            <p class="text-gray-700 leading-relaxed mt-4">
-                                <strong>3.Hardware (NodeMCU y garra robótica)</strong>
-                                El NodeMCU es el microcontrolador central del sistema, que se conecta al servidor mediante Wi-Fi. Este recibe comandos, los procesa y controla los motores o actuadores de la garra robótica a través de sus pines GPIO.
-                                En caso de incluir sensores, el NodeMCU también puede enviar retroalimentación al servidor sobre el estado del sistema, como la posición actual de la garra o posibles errores.
-                            </p>
-                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                            <!-- Tarjeta 1 -->
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold"> 1.Introduccion</h2>
+                                <p class="text-sm text-gray-600"> Proyecto nace como una práctica universitaria...</p>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4"> 1.Introducción del proyecto</h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed">
+                                            Este proyecto nace como una práctica universitaria con el objetivo de demostrar cómo es posible controlar dispositivos físicos, como una garra robótica, de manera remota y eficiente mediante tecnología moderna. Aunque sencillo en su concepción, el prototipo introduce conceptos fundamentales de electrónica y programación, y ofrece una experiencia completa en desarrollo <strong>full-stack</strong> al integrar hardware y software.
+                                        </p>
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            El ejemplo de la garra robótica puede escalarse hacia aplicaciones más complejas, como el control de PLCs, sistemas embebidos, brazos robóticos industriales o simulaciones de control remoto en sectores como la industria y la exploración remota. Además, en entornos educativos, sirve como introducción práctica a la programación y la electrónica básica.
+                                        </p>
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            En resumen, este proyecto no solo cumple objetivos académicos, sino que también demuestra el potencial de herramientas tecnológicas accesibles para resolver problemas reales y explorar soluciones innovadoras.
+                                        </p>
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <!-- Tarjeta 2 -->
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold"> 2.Arquitectura</h2>
+                                <p class="text-sm text-gray-600">Conecta al usuario, el servidor y el hardware...</p>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4"> 2.Arquitectura del sistema</h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed">
+                                            La arquitectura del sistema conecta al usuario, el servidor y el hardware para lograr el control eficiente de la garra robótica. Esta integración entre software y hardware está diseñada de manera modular, permitiendo escalabilidad y adaptabilidad a diferentes aplicaciones. 
+                                            <h4 class="text-2xl font-semibold text-gray-700 mb-4">Componentes del sistema</h4> 
+                                             <p class="text-gray-700 leading-relaxed mt-4">
+                                            <strong>1.Cliente (Frontend)</strong> El cliente se representa mediante una interfaz web intuitiva y accesible desde cualquier navegador. A través de esta interfaz, el usuario puede enviar comandos específicos para interactuar con la garra robótica, como abrir, cerrar, o moverla en distintas direcciones.
+                                             Los comandos generados por el usuario son enviados al servidor utilizando solicitudes HTTP o WebSockets, dependiendo de los requerimientos de comunicación en tiempo real.
+                                             </p>
+                                             <br>
+                                             <strong>2.Servidor (Backend)</strong>El servidor se encuentra alojado en un entorno que procesa y valida las solicitudes enviadas desde el cliente. Este componente traduce los comandos en un formato que el NodeMCU pueda interpretar y los transmite al hardware a través de una red local (Wi-Fi).
+                                             Adicionalmente, el servidor puede realizar funciones como:
+                                             <li>Autenticación de usuarios.</li>
+                                             <li>Registro de comandos para análisis posterior.</li>
+                                             <li>Notificación de errores en caso de fallas en la ejecución.</li>
+                                            </p>
+                                            <p class="text-gray-700 leading-relaxed mt-4">
+                                            <strong>3.Hardware (NodeMCU y garra robótica)</strong>
+                                             El NodeMCU es el microcontrolador central del sistema, que se conecta al servidor mediante Wi-Fi. Este recibe comandos, los procesa y controla los motores o actuadores de la garra robótica a través de sus pines GPIO.
+                                             En caso de incluir sensores, el NodeMCU también puede enviar retroalimentación al servidor sobre el estado del sistema, como la posición actual de la garra o posibles errores.
+                                            </p>
+                                            
+                                    </p>
+                                </div>
+                            </div>
+                        
+                            <!-- Tarjeta 3 -->
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold"> 3.Codigo Fuente</h2>
+                                <p class="text-sm text-gray-600">Controlar una garra robótica a través de una conexión Wi-Fi...</p>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4">3.Código Fuente: Control de la Garra Robótica</h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            El programa está diseñado para controlar una garra robótica a través de una conexión Wi-Fi, utilizando un microcontrolador ESP8266 o ESP32. 
+                                            A continuación, se describen los principales componentes del código y su funcionalidad.
+                                        </p>
+                                        <strong> 1.Bibliotecas Utilizadas</strong>
+                                            <li>ESP8266WiFi.h / wifi.h</li>
+                                                <p>Permite la conexión del microcontrolador a una red Wi-Fi.
+                                                En caso de usar un ESP32, se debe cambiar la biblioteca a WiFi.h.</p>
+                                            <li> 2.ESP8266WebServer.h / WebServer.h</li>
+                                                <p>Implementa un servidor web que procesa las solicitudes HTTP enviadas por el cliente.
+                                                Cambia a WebServer.h si utilizas un ESP32.</p>
+                                            <li> 3.Servo.h </li>
+                                            <p>Biblioteca para controlar los servos de la garra robótica. Proporciona funciones para manejar ángulos y movimientos.</p>
+                                       </p>
+                                    </p>
+                                </div>
+                            </div>
 
-                        <article>
-                            <h3 class="text-xl font-semibold text-gray-700">3. Requerimientos</h3>
-                            <ul class="list-disc pl-6 text-gray-600">
-                                <li>NodeMCU</li>
-                                <li>Motor paso a paso</li>
-                                <li>Fuente de alimentación</li>
-                                <li>Garra robótica</li>
-                            </ul>
-                        </article>
+
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold"> 3.1.Codigo fuente </h2>
+                                <p class="text-sm text-gray-600">Primeros pasos...</p>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4">3.1.Codigo fuente: Configuración de Red Wi-Fi</h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            El código utiliza las variables ssid y password para conectarse a una red Wi-Fi. Estas deben ser configuradas con el nombre de la red y la contraseña correspondientes. 
+                                            <li>const char* ssid = "TuSSID"; // Cambia por tu red WiFi</li>
+                                            <li>const char* password = "TuPassword"; // Cambia por tu contraseña WiFi</li>
+                                        <p class="font-bold">2.Servos y Posiciones Iniciales</p>
+                                            <p class="text-gray-700">Se emplean cuatro servos, cada uno asignado a una parte de la garra robótica:</p>
+                                            <li><strong>xServo:</strong>Movimiento en el eje X. </li>
+                                            <li><strong>yServo:</strong>Movimiento en el eje Y. </li>
+                                            <li><strong>zServo:</strong>Movimiento en el eje Z. </li>
+                                            <li><strong>clawServo:</strong>Controla la apertura y cierre de la garra.</li>
+                                            <p><strong>3.Cada servo se inicializa en una posición inicial de 90 grados.</strong></p>
+                                            <li>int xPos = 90;</li>
+                                            <li>int yPos = 90;</li>
+                                            <li>int zPos = 90;</li>
+                                            <li>int clawPos = 90;</li>
+                                            <p>En el método <strong>setup</strong>, los servos se conectan a pines específicos del microcontrolador:</p>
+                                            <li>xServo.attach(11);</li>
+                                            <li>y.attach(10);</li>
+                                            <li>zServo.attach(9);</li>
+                                            <li>clawnServo.attach(6);</li>
+                                        </p>
+                                        </p>
+                                       </p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold"> 3.2.Codigo fuente </h2>
+                                <p class="text-sm text-gray-600">Primeros pasos...</p>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4">3.2.Codigo fuente: Configuración del servidor web</h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            El servidor web se inicializa en el puerto 80 y se configura para manejar solicitudes HTTP. Una de las rutas principales es <strong>/move</strong>, la cual se utiliza para recibir comandos de movimiento para los servos.
+                                            <li>server.on("/move", handleMove); // Ruta para mover el brazo</li>
+                                            <li>server.begin();</li>
+                                            <p>Cuando el servidor recibe una solicitud en la ruta <strong>/move</strong>, se llama a la función <strong>handleMove</strong>, encargada de interpretar los parámetros enviados por el cliente.</p>
+                                        <p class="font-bold">4.Función handleMove</p>
+                                            <p class="text-gray-700">La función procesa los parámetros enviados en la URL (por ejemplo, ?x=45&y=90&z=135&claw=60) y ajusta los ángulos de los servos utilizando la biblioteca Servo.</p>
+                                            <li>if (server.hasArg("x")) xPos = constrain(server.arg("x").toInt(), 0, 180);</li>
+                                            <li>if (server.hasArg("y")) yPos = constrain(server.arg("y").toInt(), 0, 180);</li>
+                                            <li>if (server.hasArg("z")) zPos = constrain(server.arg("z").toInt(), 0, 180);</li>
+                                            <li>if (server.hasArg("claw")) clawPos = constrain(server.arg("claw").toInt(), 0, 180);</li>
+                                            <p>Los valores son validados para garantizar que se encuentren en el rango de 0 a 180 grados. Después, los servos se mueven a las posiciones correspondientes:</p>
+                                            <li>xServo.write(xPos);</li>
+                                            <li>yServo.write(yPos);</li>
+                                            <li>zServo.write(zPos);</li>
+                                            <li>clawServo.write(clawPos);</li>
+                                            <p>Finalmente, se envía una respuesta al cliente indicando que el movimiento fue ejecutado:</p>
+                                            <li>server.send(200, "text/plain", "Movimiento ejecutado");</li>
+                                        </p>
+                                        </p>
+                                       </p>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="card bg-white shadow-md p-4 rounded-lg cursor-pointer">
+                                <h2 class="text-lg font-bold">4.Flujo</h2>
+                            </div>
+                            <div class="fullscreen-card fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 scale-0 transition-transform duration-300">
+                                <div class="bg-white p-6 rounded-lg shadow-lg max-w-3xl w-full relative">
+                                    <button class="absolute top-2 right-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2">
+                                        ✕
+                                    </button>
+                                    <h2 class="text-2xl font-bold mb-4">4. Flujo del Programa </h2>
+                                    <p class="text-gray-700">
+                                        <p class="text-gray-700 leading-relaxed mt-4">
+                                            <p><strong>1.Conexión Wi-Fi:</strong></p>
+                                            <p>El microcontrolador intenta conectarse a la red especificada. Una vez conectado, muestra la dirección IP asignada en el monitor serial.</p>
+                                            <p><strong>2.Inicio del Servidor Web:</strong></p>
+                                            <p>El servidor queda a la espera de solicitudes en el puerto 80.</p>
+                                            <p><strong>3.Manejo de Solicitudes:</strong></p>
+                                            <li>El cliente envía una solicitud HTTP a la ruta /move con los parámetros deseados.</li>
+                                            <li>El servidor interpreta los parámetros y ajusta los servos en consecuencia.</li>
+                                            <p><strong>4.Movimiento de la Garra:</strong></p>
+                                            <p>Los servos se mueven a las posiciones indicadas, y se envía una confirmación al cliente.</p>
+                                        </p>
+                                        </p>
+                                       </p>
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
                     </div>
                 </section>
                 
 
+
+
                  <!-- Sección de galeria -->
-        <section id="gallery" class="transition-opacity duration-500 hidden">
-            <div class="text-center">
-                <h2 class="text-xl font-bold">Contacto</h2>
-                <p>Para consultas, puedes escribirnos a: 
-                    <a href="mailto:contacto@proyectogenesis.com" class="text-blue-500 hover:underline">contacto@proyectogenesis.com</a>
-                </p>
-                <p>Síguenos en nuestras redes sociales para actualizaciones del proyecto.</p>
-            </div>
-        </section>
+                 <section id="gallery" class="transition-opacity duration-500 hidden">
+                    <div class="flex flex-col items-center justify-center h-screen text-center">
+                        <!-- Título -->
+                        <h1 class="text-3xl font-bold text-gray-700 mb-4">Gallery - Coming Soon!</h1>
+                        <!-- Mensaje -->
+                        <p class="text-lg text-gray-500 mb-6">
+                            Our robot is hard at work preparing the gallery. Check back soon!
+                        </p>
+                        <!-- Imagen GIF -->
+                        <img src="assets/images/coming-unscreen.gif" alt="Robot working" class="w-64 h-auto">
+                    </div>
+                </section>
+
+
                     <!-- Sección de acerca de  -->
-        <section id="about" class="transition-opacity duration-500 hidden">
-            <div class="text-center">
-                <h2 class="text-xl font-bold">Contacto</h2>
-                <p>Para consultas, puedes escribirnos a: 
-                    <a href="mailto:contacto@proyectogenesis.com" class="text-blue-500 hover:underline">contacto@proyectogenesis.com</a>
-                </p>
-                <p>Síguenos en nuestras redes sociales para actualizaciones del proyecto.</p>
-            </div>
-        </section>
+                <section id="about" class="bg-w py-12">
+                    <div class="max-w-6xl mx-auto px-4">
+                        <h2 class="text-3xl font-bold text-gray-700 text-center mb-8">Contáctanos</h2>
+                        <p class="text-center text-gray-600 mb-12">Estamos aquí para ayudarte. ¡Escríbenos o síguenos en nuestras redes sociales!</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Formulario de contacto -->
+                            <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+                                <div class="mb-4">
+                                    <label for="name" class="block text-gray-600 mb-2">Nombre</label>
+                                    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300" placeholder="Tu nombre" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="block text-gray-600 mb-2">Correo Electrónico</label>
+                                    <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300" placeholder="Tu correo" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="block text-gray-600 mb-2">Mensaje</label>
+                                    <textarea id="message" name="message" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                                </div>
+                                <button id="submit-button" class="w-full bg-gray-400 text-gray-200 py-2 rounded-lg cursor-not-allowed focus:outline-none" disabled>Enviar</button>
+                                </button>
+                            </form>
+                            
+                            <!-- Redes sociales y mapa -->
+                            <div>
+                                <div class="text-center mb-8">
+                                    <h3 class="text-lg font-semibold text-gray-700 mb-4">Síguenos en:</h3>
+                                    <div class="flex justify-center space-x-6">
+                                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300"><img src="assets/images/iloveimg-resized/fb.png" alt="facebook"></a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300"><img src="assets/images/iloveimg-resized/tw.png" alt="X"></a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300"><img src="assets/images/iloveimg-resized/ing.png" alt="instagram"></a>
+                                        <a href="#" class="text-blue-600 hover:text-blue-800 transition duration-300"><img src="assets/images/iloveimg-resized/red.png" alt="reddit"></a>
+                                    </div>
+                                </div>
+                                <iframe class="rounded-lg shadow-lg" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.266301936224!2d-106.12656962449854!3d28.6517439756543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea42e861ed5469%3A0x798b9fb0cb1a7754!2sLivingLab%20CUU!5e0!3m2!1ses!2smx!4v1733264272902!5m2!1ses!2smx"
+                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                     
+ 
 
 
     </main>
